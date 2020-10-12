@@ -1,15 +1,15 @@
 # don't forget to add: require 'pry'
+require 'pry'
 
 def generate_star_date
-  (rand(100000) + 400000) / 10.0
+  generate_star_date = ((rand(100000) + 400000) / 10.0)
 end
 
-
-def state_log(star_date)
-  "Captain's Log, star date #{star_date}."
+def state_log(generate_star_date)
+  "Captain's Log, star date #{generate_star_date.to_s}."
 end
 
 def engage
+  date = generate_star_date.to_s
   puts state_log(date)
-  date = generate_star_date
 end
